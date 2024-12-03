@@ -1,101 +1,115 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lakshmi Srinidh Pachabotla - Portfolio</title>
     <style>
+        /* General Styles */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: white;
-            text-align: center;
+            background-color: #f9f9f9;
+            color: #333;
             line-height: 1.6;
         }
         header {
+            text-align: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
+            background: #ffffff;
+            border-bottom: 2px solid #dcdcdc;
         }
         header h1 {
-            font-size: 3rem;
             margin: 0;
+            font-size: 2.5rem;
+            color: #2d89ef;
         }
-        img {
-            margin-top: 20px;
+        header img {
+            margin-top: 15px;
+            width: 180px;
             border-radius: 50%;
-            width: 200px;
+            border: 4px solid #2d89ef;
         }
+
+        /* Section Styles */
         section {
-            margin: 20px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
             max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 30px auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
+        section h2 {
+            color: #2d89ef;
+            border-bottom: 2px solid #dcdcdc;
+            padding-bottom: 5px;
+        }
+        section p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        /* Tech Stack Styling */
         .tech-stack img {
             margin: 10px;
-            width: 100px;
+            height: 40px;
         }
+
+        /* Table Styling */
         table {
             width: 100%;
-            margin: 20px 0;
+            margin-top: 15px;
             border-collapse: collapse;
         }
         th, td {
             padding: 10px;
-            border: 1px solid #ddd;
-            background: rgba(0, 0, 0, 0.3);
+            text-align: left;
+            border: 1px solid #dcdcdc;
+        }
+        th {
+            background-color: #2d89ef;
+            color: #ffffff;
+        }
+        td {
+            background-color: #f5f5f5;
         }
         a {
-            color: #00e1ff;
+            color: #2d89ef;
             text-decoration: none;
-            font-weight: bold;
         }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styling */
         footer {
-            margin-top: 20px;
+            text-align: center;
+            margin-top: 30px;
             font-size: 0.9rem;
-            color: #ccc;
-        }
-        .content p {
-            margin: 10px 0;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My GitHub Portfolio!</h1>
+        <h1>Welcome to My Portfolio</h1>
         <img src="https://raw.githubusercontent.com/lakshmisrinidhp/assets/main/IMG_5048.JPG" alt="Lakshmi Srinidh Pachabotla">
     </header>
     <section>
-        <h2>👋 Hi, I'm <strong>Lakshmi Srinidh Pachabotla</strong>!</h2>
+        <h2>👋 About Me</h2>
         <p>
             🎓 <strong>Master’s Student in Software Engineering of Distributed Systems</strong><br>
             📍 <em>KTH Royal Institute of Technology, Stockholm, Sweden</em>
         </p>
-        <p>
-            <em>Turning ideas into impactful software solutions while exploring AI, cloud computing, and distributed systems.</em>
-        </p>
-    </section>
-    <section>
-        <h2>About Me</h2>
-        <div class="content">
-            <p>With experience in technologies like **Python**, **Java**, **React.js**, and **Erlang**, I have worked on diverse projects ranging from building scalable web applications to implementing distributed systems.</p>
-            <p>I am always eager to learn and explore new tools and frameworks, continuously pushing my skills to new heights.</p>
-            <p>Currently working on projects related to **Advanced Data Mining** and **Distributed Artificial Intelligence and Its Intelligent Agents**.</p>
-            <p>My ultimate goal is to create technology that simplifies lives and drives meaningful change. **Welcome to my portfolio, where I showcase the work I love doing!**.</p>
-        </div>
+        <p>I am passionate about turning ideas into impactful software solutions while exploring AI, cloud computing, and distributed systems.</p>
+        <p>With expertise in Python, Java, React.js, and Erlang, I work on diverse projects ranging from scalable web applications to distributed systems.</p>
     </section>
     <section>
         <h2>🛠️ Tech Stack</h2>
         <div class="tech-stack">
             <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
             <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java">
-            <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
-            <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
-            <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
             <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React.js">
             <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
             <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS">
@@ -117,7 +131,7 @@
             </tr>
             <tr>
                 <td>🎵 MMSE Final Project</td>
-                <td>An event management system built with Python (Flask), HTML, featuring role-based dashboards, task assignments, and financial approvals.</td>
+                <td>An event management system built with Python (Flask), featuring role-based dashboards, task assignments, and financial approvals.</td>
                 <td><a href="https://github.com/lakshmisrinidhp/MMSE_FINAL_PROJECT">View Repository</a></td>
             </tr>
         </table>
@@ -125,18 +139,19 @@
     <section>
         <h2>💼 Professional Experience</h2>
         <ul>
-            <li><strong>Host for Career Fair - THS Armada, KTH University</strong>
+            <li>
+                <strong>Host for Career Fair - THS Armada, KTH University</strong>
                 <ul>
                     <li>Organized Sweden's largest student-run career fair with over 200 companies.</li>
                     <li>Coordinated with industry representatives to ensure smooth event logistics.</li>
                     <li>Enhanced corporate engagement strategies, increasing participation by 10%.</li>
                 </ul>
             </li>
-            <li><strong>Board Member & Software Engineer - Association of Engineering Students in Rocketry</strong>
+            <li>
+                <strong>Board Member & Software Engineer - AESIR Project</strong>
                 <ul>
-                    <li>Designed a Ground Control Box for real-time monitoring of critical rocket subsystems, integrating a Raspberry Pi 7" Touch Screen LCD with an ST32 MCU-based PCB.</li>
-                    <li>Developed a robust interface to monitor NOX vent status, temperature (thermocouples), and pressure/weight (load cells).</li>
-                    <li>Created a detailed wiring diagram for seamless integration of sensors, ensuring minimal interference.</li>
+                    <li>Designed a Ground Control Box for real-time monitoring of critical rocket subsystems.</li>
+                    <li>Integrated Raspberry Pi with sensors to monitor NOX vent status, temperature, and pressure.</li>
                 </ul>
             </li>
         </ul>
