@@ -14,11 +14,15 @@
       line-height: 1.6;
     }
 
+    /* Header Styling */
     header {
       text-align: center;
       padding: 40px 20px;
       background-color: #ffffff;
       border-bottom: 4px solid #b0d495;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     header h1 {
       font-size: 2.8rem;
@@ -27,13 +31,14 @@
     }
     header img {
       margin-top: 15px;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
+      width: 400px; /* Rectangular shape */
+      height: 250px;
+      border-radius: 8px; /* Slightly rounded corners */
       border: 4px solid #007700; /* Green border around the profile picture */
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     }
 
+    /* Section Styling */
     section {
       max-width: 900px;
       margin: 30px auto;
@@ -85,6 +90,7 @@
       text-decoration: underline;
     }
 
+    /* Footer Styling */
     footer {
       text-align: center;
       margin-top: 30px;
@@ -170,29 +176,22 @@
         <td>An event management system built with Python (Flask), featuring role-based dashboards, task assignments, and financial approvals.</td>
         <td><a href="https://github.com/lakshmisrinidhp/MMSE_FINAL_PROJECT">View Repository</a></td>
       </tr>
-      <!-- Add other projects similarly -->
+      <tr>
+        <td>Data Mining</td>
+        <td>Implemented advanced data mining techniques including Jaccard Similarity, A-Priori algorithm, and streaming graph processing.</td>
+        <td><a href="https://github.com/lakshmisrinidhp/Data_Mining---ID_2222.git">View Repository</a></td>
+      </tr>
+      <tr>
+        <td>Distributed Systems</td>
+        <td>Developed scalable distributed systems in Erlang, including a fault-tolerant Distributed Hash Table using the Chord protocol.</td>
+        <td><a href="https://github.com/lakshmisrinidhp/Distributed_Systems---ID_2201-.git">View Repository</a></td>
+      </tr>
+      <tr>
+        <td>Software Testing</td>
+        <td>A Java-based application with Maven for builds and Jenkins for CI/CD pipelines.</td>
+        <td><a href="https://github.com/lakshmisrinidhp/Software_Testing.git">View Repository</a></td>
+      </tr>
     </table>
-  </section>
-
-  <section>
-    <h2>Professional Experience</h2>
-    <ul>
-      <li>
-        <strong>Host for Career Fair - THS Armada, KTH University</strong>
-        <ul>
-          <li>Organized Sweden's largest student-run career fair with over 200 companies.</li>
-          <li>Coordinated with industry representatives to ensure smooth event logistics.</li>
-          <li>Enhanced corporate engagement strategies, increasing participation by 10%.</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Board Member & Software Engineer - Association of Engineering Students in Rocketry</strong>
-        <ul>
-          <li>Designed a Ground Control Box for real-time monitoring of critical rocket subsystems.</li>
-          <li>Integrated a Raspberry Pi with sensors to monitor NOX vent status, temperature, and pressure.</li>
-        </ul>
-      </li>
-    </ul>
   </section>
 
   <section class="contact">
