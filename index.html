@@ -8,34 +8,41 @@
     /* General Styling */
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #cfebb6; /* Soft green background */
-      color: black; /* Black text color */
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f1fb; /* Pale Lavender */
+      color: #333333; /* Dark Gray */
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
-    /* Header Styling */
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #ffffff;
-      border-bottom: 4px solid #b0d495;
+    /* Sticky Navigation Bar */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #4b0082; /* Dark Purple */
+      color: white;
+      padding: 10px 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
-    header h1 {
-      font-size: 2.8rem;
-      margin: 10px 0;
-      color: #007700; /* Dark green heading */
+    nav ul li {
+      margin: 0 15px;
     }
-    header img {
-      margin-top: 15px;
-      width: 350px; /* Rectangular shape */
-      height: 500px;
-      border-radius: 8px; /* Slightly rounded corners */
-      border: 4px solid #007700; /* Green border around the profile picture */
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #e63946; /* Deep Pink */
     }
 
     /* Section Styling */
@@ -43,215 +50,152 @@
       max-width: 900px;
       margin: 30px auto;
       padding: 20px;
-      background: #ffffff;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
     }
     section h2 {
-      color: #007700;
-      border-bottom: 2px solid #b0d495;
+      color: #4b0082; /* Dark Purple */
+      border-bottom: 2px solid #8a2be2; /* Medium Violet */
       padding-bottom: 5px;
       font-size: 1.8rem;
     }
-    section p, section ul, section table {
-      margin: 10px 0;
-      font-size: 1rem;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-        /* Professional Experience List */
-    ul.experience-list {
-      list-style-type: disc;
-      margin-left: 20px;
+    /* Profile Picture */
+    header {
+      text-align: center;
+      padding: 40px 20px;
     }
-    ul.experience-list li {
-      margin: 8px 0;
+    header img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      border: 4px solid #4b0082; /* Dark Purple */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
-    /* Tech Stack Icons */
-    .tech-stack img {
-      margin: 10px;
+    /* Project Cards */
+    .project-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .project-card {
+      background-color: #e3f2fd; /* Soft Blue Gray */
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 250px;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+    .project-card img {
+      width: 50px;
       height: 50px;
     }
-
-    /* Project Table */
-    table {
-      width: 100%;
-      margin-top: 15px;
-      border-collapse: collapse;
+    .project-card h3 {
+      font-size: 1.2rem;
+      color: #4b0082;
     }
-    th, td {
-      padding: 10px;
-      text-align: left;
-      border: 1px solid #b0d495;
-    }
-    th {
-      background-color: #007700;
-      color: #ffffff;
-    }
-    td {
-      background-color: #f4f4f4;
-    }
-    a {
-      color: #007700;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    .project-card p {
+      font-size: 0.9rem;
     }
 
-    /* Footer Styling */
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      padding: 20px;
-      background: #b0d495;
-      color: black;
-    }
-
-    /* Button Links for Contact */
+    /* Contact Section */
     .contact a {
       display: inline-block;
       margin: 10px;
       text-decoration: none;
       color: white;
-      background-color: #007700;
+      background-color: #4b0082;
       padding: 10px 20px;
       border-radius: 8px;
       font-size: 1rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
     }
     .contact a:hover {
-      background-color: #005500;
+      background-color: #2a9d8f; /* Teal */
     }
   </style>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
   <header>
     <h1>Welcome to My Portfolio!</h1>
     <img src="https://raw.githubusercontent.com/lakshmisrinidhp/assets/main/IMG_5048.JPG" alt="Lakshmi Srinidh Pachabotla">
   </header>
 
-  <section>
-    <h2>👋 Hi, I'm Lakshmi Srinidh Pachabotla!</h2>
-    <p> <strong>Master’s Student in Software Engineering of Distributed Systems</strong></p>
-    <p> <em>KTH Royal Institute of Technology, Stockholm, Sweden</em></p>
-    <p><em>Turning ideas into impactful software solutions.</em></p>
-  </section>
-
-  <section>
-    <h2>About Me</h2>
+  <!-- About Section -->
+  <section id="about">
+    <h2>👋 About Me</h2>
     <p>
-      - With experience in technologies like <strong>Python, Java, React.js, and Erlang</strong>, I have worked on diverse projects ranging from building scalable web applications to implementing distributed systems. I am always eager to learn and explore new tools and frameworks, continuously pushing my skills to new heights. Currently working on projects related to Advanced Data Mining and Distributed Artificial Intelligence and Its Intelligent Agents. Hard work and commitment are at the core of everything I do, and I take pride in delivering solutions that make a real-world impact.
+      I am a Master's student in Software Engineering of Distributed Systems at KTH, Stockholm. 
+      With experience in technologies like Python, Java, and React.js, I specialize in building scalable distributed systems and data-driven solutions. 
+      My passion lies in solving real-world problems through technology.
     </p>
-    <p>
-      - In addition to coding, I am deeply interested in <strong>Machine Learning</strong>, Cloud Computing, and data-driven solutions, and I strive to stay at the forefront of advancements in these fields. Constantly learning and striving to make technology accessible and impactful. My ultimate goal is to create technology that simplifies lives and drives meaningful change.
-    </p>
-    <p>
-      - Welcome to my portfolio, where I showcase the work I love doing!    </p>
   </section>
 
-  <section>
-    <h2>Professional Experience</h2>
-    <h3>Host for Career Fair - THS Armada, KTH University</h3>
-    <ul class="experience-list">
-      <li>Organized Sweden's largest student-run career fair with over 200 companies.</li>
-      <li>Coordinated with industry representatives to ensure smooth event logistics.</li>
-      <li>Enhanced corporate engagement strategies, increasing participation by 10%.</li>
-    </ul>
-
-    <h3>Board Member & Software Engineer - Association of Engineering Students in Rocketry</h3>
-    <ul class="experience-list">
-      <li>Designed a Ground Control Box for real-time monitoring of critical rocket subsystems, integrating a Raspberry Pi 7" Touch Screen LCD with an ST32 MCU-based PCB.</li>
-      <li>Developed a robust interface to monitor NOX vent status, temperature (thermocouples), and pressure/weight (load cells).</li>
-      <li>Created a detailed wiring diagram for seamless integration of sensors, ensuring minimal interference.</li>
-      <li>Optimized the system using a plastic enclosure for better performance and durability.</li>
-      <li>Improved safety and operational efficiency through an intuitive design and real-time data visualization.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>🛠️ Tech Stack</h2>
-    <div class="tech-stack">
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-      <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java">
-      <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android">
-      <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML">
-      <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS">
-      <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
-      <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-      <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS">
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>🚀 Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <img src="https://img.icons8.com/color/48/000000/android-os.png" alt="Android Icon">
+        <h3>Here’s The Drink</h3>
+        <p>A Java-based Android app for drink exploration and management.</p>
+        <a href="https://github.com/lakshmisrinidhp/HeresTheDrink">View Project</a>
+      </div>
+      <div class="project-card">
+        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python Icon">
+        <h3>SEP Project Management</h3>
+        <p>A Python-based event management system for Swedish Event Planners.</p>
+        <a href="https://github.com/lakshmisrinidhp/MMSE_FINAL_PROJECT">View Project</a>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>Projects</h2>
-    <table>
-      <tr>
-        <th>Project</th>
-        <th>Description</th>
-        <th>Live Repo</th>
-      </tr>
-      <tr>
-        <td>SEP Final Project</td>
-        <td>An event management system built with Python (Flask), HTML featuring role-based dashboards, task assignments, and financial approvals.</td>
-        <td><a href="https://github.com/lakshmisrinidhp/MMSE_FINAL_PROJECT">View Repository</a></td>
-      </tr>
-      <tr>
-        <td>Data Mining</td>
-        <td>Implemented advanced data mining techniques including Jaccard Similarity, A-Priori algorithm, and streaming graph processing to analyze and optimize large datasets. Developed scalable solutions for text similarity, frequent itemsets, real-time graph analysis, clustering, and distributed graph partitioning.</td>
-        <td><a href="https://github.com/lakshmisrinidhp/Data_Mining---ID_2222.git">View Repository</a></td>
-      </tr>
-       <tr>
-        <td>Here’s The Drink</td>
-        <td>A Java-based Android app for drink exploration and management with Firebase for real-time data and notifications.</td>
-        <td><a href="https://github.com/lakshmisrinidhp/HeresTheDrink">View Repository</a></td>
-      </tr>
-      <tr>
-        <td>Edge Detection Project</td>
-        <td>This project implements an edge detection algorithm using Python, leveraging libraries like numpy, pandas, matplotlib, and scipy for image processing and visualization. It converts color images to grayscale, applies a convolutional mask for edge detection, and generates visualizations for comparative analysis.</td>
-        <td><a href="https://github.com/lakshmisrinidhp/Edge_Detection.git">View Repository</a></td>
-      </tr>
-      <tr>
-        <td>COVID-19 Simulation Project</td>
-        <td>This project simulates the spread of COVID-19 across multiple countries using Python. It utilizes pandas for data handling, matplotlib for visualizations, and a Markov chain model to simulate health state transitions, generating detailed and aggregated results stored in CSV files and visualized in a bar chart.</td>
-        <td><a href="https://github.com/lakshmisrinidhp/COVID_19_Simulation-Project.git">View Repository</a></td>
-      </tr>
-      <tr>
-        <td>Distributed Systems</td>
-        <td>Developed scalable distributed systems in Erlang, including a fault-tolerant Distributed Hash Table (DHT) using the Chord protocol for efficient data storage and retrieval. Implemented Lamport clocks for event ordering and a group membership service ensuring reliable message delivery, leader election, and system consistency.</td>
-        <td><a href="https://github.com/lakshmisrinidhp/Distributed_Systems---ID_2201-.git">View Repository</a></td>
-      </tr>
-      <tr>
-        <td>Software Testing</td>
-        <td>This software testing project involves a Java-based application using Maven for build management and JUnit for testing. Bitbucket is used for version control, while Jenkins automates the CI/CD pipeline, including building, testing, and monitoring changes. The integration ensures reliable and maintainable software delivery.</td>
-        <td><a href="https://github.com/lakshmisrinidhp/Software_Testing.git">View Repository</a></td>
-      </tr>
-      <tr>
-        <td>Ship of Fools</td>
-        <td>This Python-based project implements the "Ship of Fools" dice game using object-oriented programming. It uses random for dice rolls and game logic, and ensures modularity through distinct classes for dice management, player interactions, and scoring.</td>
-        <td><a href="https://github.com/lakshmisrinidhp/Ship-of-Fools.git">View Repository</a></td>
-      </tr>
-      <tr>
-        <td>Distributed Artificial Intelligence & its Intelligent Agents</td>
-        <td>Designed and implemented distributed artificial intelligence systems using the GAMA platform, simulating intelligent agents with dynamic behaviors in complex environments. Developed features like auctions, stage selection optimization, and behavioral analysis to model real-world interactions and decision-making processes.</td>
-        <td><a href="https://github.com/lakshmisrinidhp/DAI-IA---ID_2209.git">View Repository</a></td>
-      </tr>
-    </table>
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>💼 Professional Experience</h2>
+    <h3>THS Armada</h3>
+    <p>Organized Sweden's largest student-run career fair, hosting over 200 companies.</p>
+    <h3>Association of Engineering Students in Rocketry</h3>
+    <p>Designed a Ground Control Box for real-time monitoring of rocket subsystems.</p>
   </section>
-  
 
-  <section class="contact">
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
     <h2>📬 Let’s Connect!</h2>
     <a href="https://www.linkedin.com/in/lakshmisrinidhpachabotla/">LinkedIn</a>
     <a href="mailto:lakshmisrinidhpachabotla@gmail.com">Email</a>
   </section>
-
-  
-  <footer>
-    <p>© 2024 Lakshmi Srinidh Pachabotla. All rights reserved.</p>
-  </footer>
 
 </body>
 </html>
