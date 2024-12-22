@@ -8,9 +8,9 @@
     /* General Styling */
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f1fb; /* Pale Lavender */
-      color: #333333; /* Dark Gray */
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #cfebb6, #ffffff);
+      color: #333;
       line-height: 1.6;
       scroll-behavior: smooth;
     }
@@ -19,11 +19,10 @@
     nav {
       position: sticky;
       top: 0;
-      background-color: #4b0082; /* Dark Purple */
-      color: white;
+      background-color: #007700;
       padding: 10px 0;
-      z-index: 1000;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
     }
     nav ul {
       display: flex;
@@ -39,10 +38,25 @@
       text-decoration: none;
       color: white;
       font-weight: bold;
-      transition: color 0.3s ease;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
     }
     nav ul li a:hover {
-      color: #e63946; /* Deep Pink */
+      background-color: #005500;
+    }
+
+    /* Header Styling */
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header img {
+      width: 300px;
+      height: 400px;
+      border-radius: 10px;
+      border: 4px solid #007700;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
     /* Section Styling */
@@ -56,10 +70,10 @@
       animation: fadeIn 1s ease-in-out;
     }
     section h2 {
-      color: #4b0082; /* Dark Purple */
-      border-bottom: 2px solid #8a2be2; /* Medium Violet */
-      padding-bottom: 5px;
+      color: #007700;
       font-size: 1.8rem;
+      border-bottom: 2px solid #b0d495;
+      padding-bottom: 5px;
     }
     @keyframes fadeIn {
       from {
@@ -72,20 +86,7 @@
       }
     }
 
-    /* Profile Picture */
-    header {
-      text-align: center;
-      padding: 40px 20px;
-    }
-    header img {
-      width: 200px;
-      height: 200px;
-      border-radius: 10px;
-      border: 4px solid #4b0082; /* Dark Purple */
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Project Cards */
+    /* Projects Section */
     .project-cards {
       display: flex;
       flex-wrap: wrap;
@@ -93,44 +94,46 @@
       justify-content: center;
     }
     .project-card {
-      background-color: #e3f2fd; /* Soft Blue Gray */
-      padding: 15px;
+      background: #e3f2fd;
+      border: 1px solid #b0d495;
       border-radius: 10px;
+      padding: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
       text-align: center;
-      width: 250px;
       transition: transform 0.3s ease;
     }
     .project-card:hover {
       transform: scale(1.05);
     }
-    .project-card img {
-      width: 50px;
-      height: 50px;
-    }
     .project-card h3 {
+      color: #007700;
       font-size: 1.2rem;
-      color: #4b0082;
     }
     .project-card p {
       font-size: 0.9rem;
     }
-
-    /* Contact Section */
-    .contact a {
+    .project-card a {
       display: inline-block;
-      margin: 10px;
+      margin-top: 10px;
       text-decoration: none;
       color: white;
-      background-color: #4b0082;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-size: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease;
+      background-color: #007700;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
     }
-    .contact a:hover {
-      background-color: #2a9d8f; /* Teal */
+    .project-card a:hover {
+      background-color: #005500;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      background: #b0d495;
+      color: black;
     }
   </style>
 </head>
@@ -156,9 +159,11 @@
   <section id="about">
     <h2>👋 About Me</h2>
     <p>
-      I am a Master's student in Software Engineering of Distributed Systems at KTH, Stockholm. 
-      With experience in technologies like Python, Java, and React.js, I specialize in building scalable distributed systems and data-driven solutions. 
-      My passion lies in solving real-world problems through technology.
+      I am a Master's student in Software Engineering of Distributed Systems at KTH, Stockholm.
+      I specialize in building scalable systems and data-driven solutions using Python, Java, and React.js.
+    </p>
+    <p>
+      My passion lies in solving real-world problems through technology and making an impact with innovative solutions.
     </p>
   </section>
 
@@ -167,35 +172,47 @@
     <h2>🚀 Projects</h2>
     <div class="project-cards">
       <div class="project-card">
-        <img src="https://img.icons8.com/color/48/000000/android-os.png" alt="Android Icon">
+        <h3>SEP Final Project</h3>
+        <p>An event management system featuring dashboards and task assignments.</p>
+        <a href="https://github.com/lakshmisrinidhp/MMSE_FINAL_PROJECT">View Project</a>
+      </div>
+      <div class="project-card">
         <h3>Here’s The Drink</h3>
-        <p>A Java-based Android app for drink exploration and management.</p>
+        <p>An Android app for drink exploration using Firebase.</p>
         <a href="https://github.com/lakshmisrinidhp/HeresTheDrink">View Project</a>
       </div>
       <div class="project-card">
-        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python Icon">
-        <h3>SEP Project Management</h3>
-        <p>A Python-based event management system for Swedish Event Planners.</p>
-        <a href="https://github.com/lakshmisrinidhp/MMSE_FINAL_PROJECT">View Project</a>
+        <h3>COVID-19 Simulation</h3>
+        <p>Python-based simulation of COVID-19 spread using Markov models.</p>
+        <a href="https://github.com/lakshmisrinidhp/COVID_19_Simulation-Project.git">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Edge Detection</h3>
+        <p>Image processing using Python libraries like Numpy and Scipy.</p>
+        <a href="https://github.com/lakshmisrinidhp/Edge_Detection.git">View Project</a>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
+  <!-- Professional Experience -->
   <section id="experience">
     <h2>💼 Professional Experience</h2>
-    <h3>THS Armada</h3>
-    <p>Organized Sweden's largest student-run career fair, hosting over 200 companies.</p>
-    <h3>Association of Engineering Students in Rocketry</h3>
-    <p>Designed a Ground Control Box for real-time monitoring of rocket subsystems.</p>
+    <h3>Host for Career Fair - THS Armada</h3>
+    <p>Organized Sweden's largest student-run career fair with over 200 companies.</p>
+    <h3>Board Member - AESIR</h3>
+    <p>Designed a Ground Control Box for monitoring critical rocket subsystems.</p>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <section id="contact">
     <h2>📬 Let’s Connect!</h2>
     <a href="https://www.linkedin.com/in/lakshmisrinidhpachabotla/">LinkedIn</a>
     <a href="mailto:lakshmisrinidhpachabotla@gmail.com">Email</a>
   </section>
+
+  <footer>
+    <p>© 2024 Lakshmi Srinidh Pachabotla. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
