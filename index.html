@@ -59,6 +59,53 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
+    /* Contact Section Styling */
+#contact {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background: #b0d495;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+  color: #007700;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #007700;
+  font-weight: bold;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-links a img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-links a:hover {
+  transform: scale(1.05);
+  background: #f0f4f7;
+}
+
+
     /* Section Styling */
     section {
       max-width: 900px;
@@ -250,12 +297,20 @@
 
 
 
-  <!-- Contact Section -->
   <section id="contact">
-    <h2>📬 Let’s Connect!</h2>
-    <a href="https://www.linkedin.com/in/lakshmisrinidhpachabotla/">LinkedIn</a>
-    <a href="mailto:lakshmisrinidhpachabotla@gmail.com">Email</a>
-  </section>
+  <h2>📬 Let’s Connect!</h2>
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/in/lakshmisrinidhpachabotla/" target="_blank">
+      <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn Icon">
+      LinkedIn
+    </a>
+    <a href="mailto:lakshmisrinidhpachabotla@gmail.com">
+      <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Email Icon">
+      Email
+    </a>
+  </div>
+</section>
+
 
   <footer>
     <p>© 2024 Lakshmi Srinidh Pachabotla. All rights reserved.</p>
